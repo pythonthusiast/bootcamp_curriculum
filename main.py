@@ -1,27 +1,39 @@
+import sys
 import pydot
+
 # graph = pydot.Dot(graph_type='digraph',, size="1920,1080" )
 graph = pydot.Dot(graph_type='digraph', rankdir='LR')
-edge = pydot.Edge("Hari 1", "Basic Python Syntaxes")
-graph.add_edge(edge)
-edge = pydot.Edge("Basic Python Syntaxes", "Sequential Code")
-graph.add_edge(edge)
-edge = pydot.Edge("Basic Python Syntaxes", "Branching with IF")
-graph.add_edge(edge)
-edge = pydot.Edge("Basic Python Syntaxes", "Looping with For and While")
-graph.add_edge(edge)
 
-edge = pydot.Edge("Hari 1", "Modularization - Function")
-graph.add_edge(edge)
-edge = pydot.Edge("Hari 1", "Modularization - Class")
-graph.add_edge(edge)
-edge = pydot.Edge("Modularization - Class", "Encapsulation")
-graph.add_edge(edge)
-edge = pydot.Edge("Modularization - Class", "Inheritance")
-graph.add_edge(edge)
-edge = pydot.Edge("Modularization - Class", "Polymorphism")
-graph.add_edge(edge)
-edge = pydot.Edge("Hari 1", "Modularization - Package")
-graph.add_edge(edge)
-edge = pydot.Edge("Hari 1", "Modularization - Study Case - Pydot Usage")
-graph.add_edge(edge)
-graph.write_png('hari1.png')
+root = 'Curriculum'
+days = ['Hari 1', 'Hari 2', 'Hari 3', 'Hari 4', 'Hari 5', 'Hari 6']
+for day in days:
+    graph.add_edge(pydot.Edge(root, day))
+
+day1 = ["Basic Python Syntaxes",
+        "Modularization - Function",
+        "Modularization - Class",
+        "Modularization - Package",
+        "Modularization - Study Case - Pydot Usage"]
+
+for d1 in day1:
+    graph.add_edge(pydot.Edge(days[0], d1))
+
+day1_basic = [
+    "Sequential Code",
+    "Branching with IF",
+    "Looping with For and While"
+]
+
+for day2 in day1_basic:
+    graph.add_edge(pydot.Edge(day1[0], day2))
+
+day1_class = [
+    "Encapsulation",
+    "Inheritance",
+    "Polymorphism"
+]
+
+for d2c in day1_class:
+    graph.add_edge(pydot.Edge(day1[2], d2c))
+
+graph.write_png('curriculum.png')
