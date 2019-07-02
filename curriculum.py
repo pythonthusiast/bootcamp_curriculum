@@ -48,9 +48,12 @@ hari2 = [{
 }]
 
 hari3 = [{
-    'Jira Review': [],
-    'Git in Team': [],
-    'Remote Work: How to Apply to Job in Upwork or Other Remote Work Marketplace': [],
+    'Git in Team': [
+        {'Feature Branch': []},
+        {'Git Flow': []},
+        {'Resolving git conflict': []},
+        {'Pull request | Code Review': []},
+    ],
     'Scrapy': [{'Detik.com': []}, {'Airport data scraping': []}],
 }]
 
@@ -58,9 +61,10 @@ hari4 = [{
     'Remote Work: Kapan Waktu Terbaik untuk Resign?': [],
     'Membangun Blog Berbasis Flask dan Django DRF': [
         {'Flask Frontend Development': [], 'Django Backend Development': []}],
-    'Remote Work: Teknik Personal Branding': [],
+    'Remote Work: Fondasi Utama Pecah Telur!': [],
+    'Personal Branding Hands-On!': [],
     'BONUS MATERIAL': [{'Scrapy for Marketplace': []}, {'Dockerizing Flask and Django': []},
-                       {'Deployment do Digital Ocean': []}],
+                       {'Deployment to Digital Ocean': []}],
 }]
 
 curriculum = [{
